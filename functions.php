@@ -95,29 +95,36 @@ function chd_portfolio_content_width() {
 }
 add_action( 'after_setup_theme', 'chd_portfolio_content_width', 0 );
 
+// REMOVE THIS - NOT NEEDED
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function chd_portfolio_widgets_init() {
-	registerchd_portfolioidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'chd_portfolio' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'chd_portfolio' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'chd_portfolio_widgets_init' );
+// function chd_portfolio_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'chd_portfolio' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => esc_html__( 'Add widgets here.', 'chd_portfolio' ),
+// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</section>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'chd_portfolio_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function chd_portfolio_scripts() {
-	wp_enqueue_style( 'chd_portfolio-style', getchd_portfoliotylesheet_uri() );
+	wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+	wp_enqueue_style( 'chd_portfolio-style', get_stylesheet_uri() ); 
+
+	// ADDED THIS
+	wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',  array('jquery'), '3.3.7', true);
+
 
 	wp_enqueue_script( 'chd_portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

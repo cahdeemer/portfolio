@@ -63,7 +63,7 @@ function chd_portfolio_entry_footer() {
 		}
 	}
 
-	if ( ! ischd_portfolioingle() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link(
 			sprintf(

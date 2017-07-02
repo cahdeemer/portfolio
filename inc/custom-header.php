@@ -14,7 +14,7 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses chd_portfolio_headerchd_portfoliotyle()
+ * @uses chd_portfolio_header_style()
  */
 function chd_portfolio_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'chd_portfolio_custom_header_args', array(
@@ -41,7 +41,7 @@ function chd_portfolio_headerstyle() {
 	 * If no custom options for text are set, let's bail.
 	 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
 	 */
-	if ( get_themesupport( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+	if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 		return;
 	}
 

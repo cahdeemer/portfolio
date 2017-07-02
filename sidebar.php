@@ -7,7 +7,7 @@
  * @package chd_portfolio
  */
 
-if ( ! is_activec_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
