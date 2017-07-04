@@ -14,17 +14,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'chd_portfolio' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'chd_portfolio' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'chd_portfolio' ), 'chd_portfolio', '<a href="https://automattic.com/">Automattic</a>' );
-			?>
-		</div><!-- .site-info -->
+		<ul class="site-info">
+			<li>Designed and built by moi</li>
+			<li>Copyright <?php echo date("Y"); ?></li>
+		</ul><!-- .site-info -->
+		<ul class="social-icons">
+			<li><a href="">Facebook</a></li>
+			<li><a href="">Twitter</a></li>
+			<li><a href="">LinkedIn</a></li>
+			<li><a href="">GitHub</a></li>
+		</ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
