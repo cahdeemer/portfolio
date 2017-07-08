@@ -1,0 +1,25 @@
+.site-header {
+	padding: 10px 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+
+.navbar-brand {
+	font-family: $font__display;
+}
+
+.navbar-default .navbar-brand {
+	color: $color__text-screen;
+	font-size: 28px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: $color__text-screen;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 8px;
+}

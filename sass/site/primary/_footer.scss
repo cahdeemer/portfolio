@@ -1,0 +1,16 @@
+footer {
+	background-color: $black;
+	color: $white;
+	padding: 15px 0px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.footer__wrapper {
+	display: flex;
+	justify-content: space-between;
+	ul {
+		padding: 0px;
+	}
+}
+

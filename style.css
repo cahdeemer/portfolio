@@ -235,7 +235,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Playfair Display", Garamond, serif; }
+  font-family: "Playfair Display", Garamond, serif;
+  font-style: italic; }
 
 p {
   margin-bottom: 1.5em; }
@@ -304,7 +305,8 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1.5em 0em;
+  -webkit-padding-start: 0px; }
 
 ul {
   list-style: disc; }
@@ -323,6 +325,14 @@ dt {
 dd {
   margin: 0 1.5em 1.5em; }
 
+.list__inline {
+  display: inline-block; }
+  .list__inline li {
+    display: inline; }
+
+.list__ul--nostyle {
+  list-style: none; }
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -332,6 +342,9 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
+
+section {
+  padding: 20px 0px; }
 
 table {
   margin: 0 0 1.5em;
@@ -431,39 +444,13 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent; }
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -549,6 +536,54 @@ a {
   margin-right: auto; }
 
 /*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.jumbotron {
+  background-color: transparent;
+  height: 550px; }
+  .jumbotron h1 {
+    font-size: 50px;
+    margin-top: 0px; }
+
+@keyframes dot-scramble {
+  from {
+    background-position: -100px 0, 50px 0, 25px 50px, 75px 50px; }
+  to {
+    background-position: -100px -100px, -50px -100px, -75px -50px, -25px -50px; } }
+@keyframes flower-grow {
+  0% {
+    background-size: 250px; }
+  25% {
+    background-size: 275px; }
+  50% {
+    background-size: 300px; }
+  75% {
+    background-size: 275px; }
+  100% {
+    background-size: 250px; } }
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #f3f3f3;
+  background-image: url("./images/branch2.svg");
+  background-size: 50px 50px;
+  opacity: 0.3; }
+
+.hero__callout-right {
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+  position: absolute;
+  right: -20px;
+  top: 25%;
+  padding: 50px;
+  width: 50%; }
+
+/*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
 .clear:before,
@@ -607,6 +642,46 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.site-header {
+  padding: 10px 0;
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 5; }
+
+.navbar-brand {
+  font-family: "Homemade Apple", cursive; }
+
+.navbar-default .navbar-brand {
+  color: #0f0f0f;
+  font-size: 28px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #0f0f0f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 8px; }
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+footer {
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+  padding: 15px 0px;
+  font-size: 12px;
+  letter-spacing: 0.5px; }
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between; }
+  .footer__wrapper ul {
+    padding: 0px; }
 
 /*--------------------------------------------------------------
 ## Comments

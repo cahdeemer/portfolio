@@ -13,17 +13,19 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<ul class="site-info">
+	<footer id="colophon" class="site-footer row">
+		<div class="footer__wrapper col-sm-10 col-sm-offset-1">
+		<ul id="site-info" class="list__ul--nostyle">
 			<li>Designed and built by moi</li>
 			<li>Copyright <?php echo date("Y"); ?></li>
 		</ul><!-- .site-info -->
-		<ul class="social-icons">
+		<ul id="social-icons" class="list__inline">
 			<li><a href="">Facebook</a></li>
 			<li><a href="">Twitter</a></li>
 			<li><a href="">LinkedIn</a></li>
 			<li><a href="">GitHub</a></li>
 		</ul>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
