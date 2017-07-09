@@ -5,6 +5,11 @@
     background-color: black;
     color: white;
     padding: 10px 50px;
+    @include screen-xs {
+        width: 80%;
+        text-align: center;
+        left: 10%;
+    }
 }
 
 .section__title-center{
@@ -14,8 +19,13 @@
     background-color: black;
     color: white;
     padding: 10px 50px;
+    @include screen-xs {
+        width: 80%;
+        text-align: center;
+        left: 10%;
+    }
 }
 
 .section__about {
-    background-color: lighten($pink, 20%);
+    background-color: lighten($green, 50%);
 }

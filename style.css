@@ -249,7 +249,8 @@ h5, h6 {
 
 p {
   margin-bottom: 1.5em;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.6; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -447,6 +448,11 @@ textarea {
   background-color: black;
   color: white;
   padding: 10px 50px; }
+  @media (max-width: 767px) {
+    .section__title-left {
+      width: 80%;
+      text-align: center;
+      left: 10%; } }
 
 .section__title-center {
   position: absolute;
@@ -455,9 +461,14 @@ textarea {
   background-color: black;
   color: white;
   padding: 10px 50px; }
+  @media (max-width: 767px) {
+    .section__title-center {
+      width: 80%;
+      text-align: center;
+      left: 10%; } }
 
 .section__about {
-  background-color: #ffa6c4; }
+  background-color: #befcc4; }
 
 /*--------------------------------------------------------------
 # Navigation

@@ -84,7 +84,7 @@ get_header(); ?>
 
 					</div>
 					<div class="col-sm-8">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et leo at erat lacinia tempus et eu eros. Praesent ut rhoncus libero. Cras a ex nec magna gravida ultrices. Nam dignissim, dui eu lacinia malesuada, sapien velit tincidunt odio, a mollis elit neque hendrerit lectus. Etiam congue lobortis est, non lobortis lorem. Praesent euismod metus non enim imperdiet tincidunt. Suspendisse eleifend, ipsum nec tempus vehicula, orci sapien bibendum sapien, sed molestie dolor sapien vitae libero.</p>
+						<p>I'm a Philly-based developer who came to coding after more than a decade as an arts manager and fundraiser. I was a 2015 Open Source Mentorship Program Fellow and am an active student and volunteer with Girl Develop It Philly. I am a voracious reader, poetry snob, foodie, leftie, INTJ, and proud introvert. I am married to an oboe player and have a cat named Pickles.</p>
 					</div>
 				</div>
 
