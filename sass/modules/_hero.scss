@@ -57,6 +57,10 @@
     top: 25%;
     padding: 50px;
     width: 50%;
+    @include screen-xs {
+    	width: 90%;
+    	right: 5%;
+    }
 
 }
 

@@ -582,6 +582,10 @@ a {
   top: 25%;
   padding: 50px;
   width: 50%; }
+  @media (max-width: 767px) {
+    .hero__callout-right {
+      width: 90%;
+      right: 5%; } }
 
 /*--------------------------------------------------------------
 # Clearings
