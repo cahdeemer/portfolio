@@ -1,7 +1,7 @@
 footer {
 	background-color: $black;
 	color: $white;
-	padding: 15px 0px;
+	padding: 30px 0px;
     font-size: 12px;
     letter-spacing: 0.5px;
 }
@@ -9,8 +9,49 @@ footer {
 .footer__wrapper {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	@include screen-xs {
+		display: initial;
+	}
+
 	ul {
 		padding: 0px;
+		margin-bottom: 0px;
+		@include screen-xs {
+			text-align: center;
+		    width: 100%;
+		    margin-bottom: 10px;
+		}
 	}
+}
+
+.social-icon {
+	fill: $grey;
+	height: 25px;
+}
+
+#social-icons {
+	li>a {
+		display: inline-flex;
+		height: 50px;
+		width: 50px;
+		background-color: $white;
+		border-radius: 50%;
+		justify-content: center;
+		align-items: center;
+		margin-right: 10px;
+		transition: all 0.5s ease-in-out;
+		&:hover {
+			border-radius: 0px;
+			background-color: $grey;
+			transform: rotate(360deg);
+			.social-icon {
+				fill: $white;
+				transform: rotate(360deg);
+			}
+		}
+
+	}
+	
 }
 
