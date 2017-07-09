@@ -653,6 +653,10 @@ a {
   position: relative;
   z-index: 5; }
 
+@media (max-width: 767px) {
+  .site-branding {
+    float: left; } }
+
 .navbar-brand {
   font-family: "Homemade Apple", cursive; }
 
@@ -666,6 +670,38 @@ a {
   letter-spacing: 1px;
   font-size: 16px;
   margin-top: 8px; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #9e9d9d;
+  width: 30px;
+  height: 3px;
+  transition: all 0.25s ease-in-out; }
+
+.navbar-toggle {
+  border: none; }
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: transparent !important; }
+    .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
+      background-color: #ff4081; }
+
+@media (max-width: 767px) {
+  .main-navigation.toggled ul {
+    background-color: #0f0f0f;
+    margin-top: 0px;
+    padding: 20px 0px; }
+    .main-navigation.toggled ul li > a {
+      color: #f3f3f3; }
+      .main-navigation.toggled ul li > a:hover {
+        color: #ff4081; } }
+
+.main-navigation.toggled .icon-bar:nth-of-type(2) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 6px; }
+.main-navigation.toggled .icon-bar:nth-of-type(3) {
+  display: none; }
+.main-navigation.toggled .icon-bar:nth-of-type(4) {
+  transform: rotate(-45deg); }
 
 /*--------------------------------------------------------------
 ## Posts and pages

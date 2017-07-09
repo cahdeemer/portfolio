@@ -6,6 +6,11 @@
     z-index: 5;
 }
 
+.site-branding {
+	@include screen-xs {
+		float: left;
+	}
+}
 
 .navbar-brand {
 	font-family: $font__display;
@@ -23,3 +28,62 @@
     font-size: 16px;
     margin-top: 8px;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: $grey;
+	width: 30px;
+	height: 3px;
+	transition: all 0.25s ease-in-out;
+	
+}
+
+.navbar-toggle {
+	border: none;
+	&:hover, &:focus {
+		background-color: transparent !important;
+		.icon-bar {
+			background-color: $pink;
+			// &:nth-of-type(2) {
+			// 	-webkit-transform: rotate(45deg);
+			// }
+			// &:nth-of-type(3) {
+			// 	display: none;
+			// }
+			// &:nth-of-type(4) {
+			// 	-webkit-transform: rotate(-45deg);
+			// }
+		}
+
+	}
+}
+
+.main-navigation.toggled ul {
+	@include screen-xs {
+		background-color: $black;
+		margin-top: 0px;
+		padding: 20px 0px;
+		li>a {
+			color: $white;
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+}
+
+.main-navigation.toggled {
+	.icon-bar {
+		&:nth-of-type(2) {
+				transform: rotate(45deg);
+				position: relative;
+    			top: 6px;
+			}
+			&:nth-of-type(3) {
+				display: none;
+			}
+			&:nth-of-type(4) {
+				transform: rotate(-45deg);
+			}
+	}
+}
+
