@@ -233,13 +233,23 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   clear: both;
   font-family: "Playfair Display", Garamond, serif;
   font-style: italic; }
 
+h4, h5, h6 {
+  clear: both;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+h5, h6 {
+  font-weight: 700; }
+
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  font-size: 16px; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -291,7 +301,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -344,7 +355,9 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
 section {
-  padding: 20px 0px; }
+  padding: 100px 0px;
+  margin: 0px;
+  position: relative; }
 
 table {
   margin: 0 0 1.5em;
@@ -425,6 +438,28 @@ textarea {
   width: 100%; }
 
 /*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.section__title-left {
+  position: absolute;
+  top: -47px;
+  left: 50px;
+  background-color: black;
+  color: white;
+  padding: 10px 50px; }
+
+.section__title-center {
+  position: absolute;
+  top: -47px;
+  left: 43%;
+  background-color: black;
+  color: white;
+  padding: 10px 50px; }
+
+.section__about {
+  background-color: #ffa6c4; }
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -435,7 +470,8 @@ a {
   a:visited {
     color: #f30053; }
   a:hover, a:focus, a:active {
-    color: #f30053; }
+    color: #f30053;
+    text-decoration: none; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -540,7 +576,8 @@ a {
 --------------------------------------------------------------*/
 .jumbotron {
   background-color: transparent;
-  height: 550px; }
+  height: 550px;
+  margin-bottom: 0px; }
   .jumbotron h1 {
     font-size: 50px;
     margin-top: 0px; }
@@ -586,6 +623,45 @@ a {
     .hero__callout-right {
       width: 90%;
       right: 5%; } }
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.slider__single, .project__single {
+  position: relative; }
+  .slider__single img, .project__single img {
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 15px auto; }
+  .slider__single h3, .slider__single h5, .project__single h3, .project__single h5 {
+    text-align: center;
+    color: #0f0f0f; }
+  .slider__single h3, .project__single h3 {
+    margin-top: 0px; }
+  .slider__single .project__overlay, .project__single .project__overlay {
+    display: none;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 64, 129, 0.5);
+    position: absolute;
+    top: 0;
+    left: 10%; }
+  .slider__single:hover .project__overlay, .project__single:hover .project__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+
+.slick-prev:before {
+  content: url("./images/arrow-l.svg"); }
+
+.slick-next:before {
+  content: url("./images/arrow-r.svg"); }
+
+.slick-next, .slick-prev {
+  width: 75px; }
 
 /*--------------------------------------------------------------
 # Clearings

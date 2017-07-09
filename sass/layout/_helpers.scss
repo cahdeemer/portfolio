@@ -1,0 +1,21 @@
+.section__title-left {
+	position: absolute;
+    top: -47px;
+    left: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px 50px;
+}
+
+.section__title-center{
+	position: absolute;
+    top: -47px;
+    left: 43%;
+    background-color: black;
+    color: white;
+    padding: 10px 50px;
+}
+
+.section__about {
+    background-color: lighten($pink, 20%);
+}

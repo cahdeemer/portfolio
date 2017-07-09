@@ -1,0 +1,57 @@
+.slider__single, .project__single {
+	position: relative;
+	img {
+		display: block;
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		margin: 15px auto;
+	}
+
+	h3, h5 {
+		text-align: center;
+		color: $black; 
+	}
+
+	h3 {
+		margin-top: 0px;
+	}
+
+	.project__overlay {
+		display: none;
+		width: 80%;
+		height: 100%;
+		background-color: rgba(255, 64, 129, 0.5);
+		position: absolute;
+		top: 0;
+		left: 10%;
+	}
+
+	&:hover {
+		.project__overlay {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    flex-direction: column;
+			
+		}
+
+	}
+}
+
+.slick-prev:before {
+    content: url('./images/arrow-l.svg');
+}
+
+.slick-next:before {
+	content: url('./images/arrow-r.svg');
+}
+
+.slick-next, .slick-prev {
+	width: 75px;
+}
+
+
+
+
+
