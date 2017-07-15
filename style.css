@@ -470,6 +470,17 @@ textarea {
 .section__about {
   background-color: #befcc4; }
 
+@media (max-width: 767px) {
+  .section__about img {
+    display: block;
+    margin: 0 auto 50px; } }
+
+.section__training {
+  background-color: #f3f3f3; }
+
+.section__bc {
+  background-color: #ff8db3; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -618,9 +629,36 @@ a {
   overflow: hidden;
   z-index: -1;
   background-color: #f3f3f3;
-  background-image: url("./images/branch2.svg");
-  background-size: 50px 50px;
+  background-image: url("./images/branch2.svg"), url("./images/branch2.svg");
+  background-size: 50px 50px, 50px 50px;
+  background-position: 0px 0px, -25px -25px;
   opacity: 0.3; }
+
+.hero__background-page {
+  position: absolute;
+  top: -50px;
+  left: -500px;
+  width: 200%;
+  height: 650px;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #ffd9e6;
+  background-image: url("./images/flower1.svg"), url("./images/flower1.svg");
+  background-size: 200px 200px, 200px 200px;
+  background-position: 0px 0px, -100px -100px; }
+
+.hero__background-single {
+  position: absolute;
+  top: -150px;
+  left: -500px;
+  width: 200%;
+  height: 750px;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #1e1e1e;
+  background-image: url("./images/flower2.svg"), url("./images/flower1.svg");
+  background-size: 150px 150px, 150px 150px;
+  background-position: 0px 0px, -75px -75px; }
 
 .hero__callout-right {
   background-color: #0f0f0f;
@@ -632,6 +670,33 @@ a {
   width: 50%; }
   @media (max-width: 767px) {
     .hero__callout-right {
+      width: 90%;
+      right: 5%; } }
+
+.hero__callout-left {
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+  position: absolute;
+  left: -20px;
+  top: 25%;
+  padding: 50px 50px 50px 70px;
+  width: 50%; }
+  @media (max-width: 767px) {
+    .hero__callout-left {
+      width: 90%;
+      right: 5%; } }
+
+.hero__callout-center {
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  padding: 50px;
+  width: 50%;
+  height: 50%; }
+  @media (max-width: 767px) {
+    .hero__callout-center {
       width: 90%;
       right: 5%; } }
 
@@ -673,6 +738,26 @@ a {
 
 .slick-next, .slick-prev {
   width: 75px; }
+
+.slick-dots {
+  bottom: -65px;
+  margin-left: -15px; }
+
+.slick-dots li {
+  width: 35px;
+  height: 35px;
+  margin: 0px 11px; }
+
+.slick-dots li button::before {
+  content: '';
+  background-color: #9e9d9d;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px; }
+
+.slick-dots li button:focus:before, .slick-dots li button:hover:before {
+  background-color: transparent;
+  border: 2px solid #ff4081; }
 
 /*--------------------------------------------------------------
 # Clearings
@@ -720,7 +805,7 @@ a {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0; }
 
 .updated:not(.published) {
   display: none; }
@@ -746,7 +831,8 @@ a {
 
 @media (max-width: 767px) {
   .site-branding {
-    float: left; } }
+    float: left;
+    margin-left: 10px; } }
 
 .navbar-brand {
   font-family: "Homemade Apple", cursive; }

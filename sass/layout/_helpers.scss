@@ -29,3 +29,21 @@
 .section__about {
     background-color: lighten($green, 50%);
 }
+
+.section__about {
+    img {
+        @include screen-xs {
+            display: block;
+            margin: 0 auto 50px;
+        }
+    }
+
+}
+
+.section__training {
+    background-color: $white;
+}
+
+.section__bc {
+    background-color: lighten($pink, 15%);
+}

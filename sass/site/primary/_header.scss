@@ -9,6 +9,7 @@
 .site-branding {
 	@include screen-xs {
 		float: left;
+		margin-left: 10px;
 	}
 }
 

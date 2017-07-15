@@ -51,6 +51,31 @@
 	width: 75px;
 }
 
+.slick-dots {
+	bottom: -65px;
+	margin-left: -15px;
+}
+
+.slick-dots li {
+	width: 35px;
+	height: 35px;
+	margin: 0px 11px;
+}
+
+.slick-dots li button::before {
+	content: '';
+    background-color: $grey;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.slick-dots li button:focus:before, .slick-dots li button:hover:before {
+	background-color: transparent;
+	border: 2px solid $pink;
+}
+
+
 
 
 

@@ -42,7 +42,7 @@
 						
 						<?php else : ?>
 							
-							<p class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<p class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Christina Deemer</a></p>
 						
 						<?php endif; ?>
 					</div><!-- .site-branding -->

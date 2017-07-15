@@ -14,7 +14,8 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer row">
-		<div class="footer__wrapper col-sm-10 col-sm-offset-1">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="footer__wrapper col-sm-12">
 		<ul id="site-info" class="list__ul--nostyle">
 			<li>Designed and built by moi</li>
 			<li>Copyright <?php echo date("Y"); ?></li>
@@ -57,6 +58,7 @@
 	C83.9,81.8,69.2,84,50.3,84z M34.3,56c-3.6,0-6.5,4-6.5,9c0,5,2.9,9,6.5,9c3.6,0,6.5-4,6.5-9C40.8,60,37.9,56,34.3,56z"/>
 </svg></a></li>
 		</ul>
+		</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
