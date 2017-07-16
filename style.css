@@ -399,7 +399,7 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #ff4081; }
 
-.btn {
+.btn-dark {
   border: 2px solid #0f0f0f;
   border-radius: 0px;
   background-color: transparent;
@@ -410,10 +410,25 @@ input[type="submit"] {
   padding: 10px 30px;
   margin: 20px;
   transition: all 0.5s ease-in-out; }
-  .btn:hover {
+  .btn-dark:hover {
     border: 2px solid #0f0f0f;
-    background-color: black;
+    background-color: #f3f3f3;
     color: #f3f3f3 !important; }
+
+.btn-white {
+  border: 2px solid #f3f3f3;
+  border-radius: 0px;
+  color: #f3f3f3 !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin: 20px;
+  transition: all 0.5s ease-in-out; }
+  .btn-white:hover {
+    border: 2px solid #f3f3f3;
+    background-color: #f3f3f3;
+    color: #0f0f0f !important; }
 
 input[type="text"],
 input[type="email"],

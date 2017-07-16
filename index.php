@@ -100,18 +100,18 @@ get_header(); ?>
 			<section class="section__tags row">
 				<h2 class="section__title-center">all tags</h2>
 				<div class="col-sm-10 col-sm-offset-1 tag__wrapper">
-					<a class="btn btn-default" href="">Tag 1</a>
-					<a class="btn btn-default" href="">Tag 2</a>
-					<a class="btn btn-default" href="">Long Tag Name</a>
-					<a class="btn btn-default" href="">Tag 4</a>
-					<a class="btn btn-default" href="">Tag 1</a>
-					<a class="btn btn-default" href="">Tag 2</a>
-					<a class="btn btn-default" href="">Tag 3</a>
-					<a class="btn btn-default" href="">Even Longer Tag Name</a>
-					<a class="btn btn-default" href="">Tag 1</a>
-					<a class="btn btn-default" href="">Tag 2</a>
-					<a class="btn btn-default" href="">Tag 3</a>
-					<a class="btn btn-default" href="">Tag 4</a>
+					<a class="btn btn-default btn-dark" href="">Tag 1</a>
+					<a class="btn btn-default btn-dark" href="">Tag 2</a>
+					<a class="btn btn-default btn-dark" href="">Long Tag Name</a>
+					<a class="btn btn-default btn-dark" href="">Tag 4</a>
+					<a class="btn btn-default btn-dark" href="">Tag 1</a>
+					<a class="btn btn-default btn-dark" href="">Tag 2</a>
+					<a class="btn btn-default btn-dark" href="">Tag 3</a>
+					<a class="btn btn-default btn-dark" href="">Even Longer Tag Name</a>
+					<a class="btn btn-default btn-dark" href="">Tag 1</a>
+					<a class="btn btn-default btn-dark" href="">Tag 2</a>
+					<a class="btn btn-default btn-dark" href="">Tag 3</a>
+					<a class="btn btn-default btn-dark" href="">Tag 4</a>
 				</div>
 			</section>
 

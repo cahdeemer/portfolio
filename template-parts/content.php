@@ -16,7 +16,9 @@
   					<div class="hero__callout-center">
   						<h6>January 1, 2018</h6>
   						<h1 class="entry-title">post title</h1>
-  						<a href="">here's a thing</a>
+  						<?php
+							echo get_the_tag_list('',', ','');
+						?>
 
   					</div>
    
