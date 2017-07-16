@@ -22,7 +22,7 @@ get_header(); ?>
   					
   					<div class="hero__background-single"></div>
   					
-  					<div class="hero__callout-center">
+  					<div class="hero__callout">
   						<h6>maybe a subheading</h6>
   						<h1 class="entry-title">blog</h1>
   						<a href="">here's a thing</a>

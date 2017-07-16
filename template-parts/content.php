@@ -13,7 +13,7 @@
 	<section class="jumbotron">
   				<div class="container">
   					<div class="hero__background-single"></div>
-  					<div class="hero__callout-center">
+  					<div class="hero__callout">
   						<h6>January 1, 2018</h6>
   						<h1 class="entry-title">post title</h1>
   						<?php

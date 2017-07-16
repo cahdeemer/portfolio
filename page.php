@@ -22,7 +22,7 @@ while ( have_posts() ) : the_post(); ?>
 			<section class="jumbotron">
   				<div class="container">
   					<div class="hero__background-page"></div>
-  					<div class="hero__callout-left">
+  					<div class="hero__callout">
   						<h1>about me</h1>
   						<p>my journey, the good parts</p>
 

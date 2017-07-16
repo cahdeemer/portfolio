@@ -681,25 +681,17 @@ a {
   width: 300%;
   height: 550px;
   overflow: hidden;
-  z-index: -1;
-  background-color: #f3f3f3;
-  background-image: url("./images/branch2.svg"), url("./images/branch2.svg");
-  background-size: 50px 50px, 50px 50px;
-  background-position: 0px 0px, -25px -25px;
-  opacity: 0.3; }
+  background-color: #ffa6c4; }
 
 .hero__background-page {
   position: absolute;
-  top: -50px;
+  top: 0px;
   left: -500px;
   width: 300%;
   height: 550px;
   overflow: hidden;
   z-index: -1;
-  background-color: #ffd9e6;
-  background-image: url("./images/flower1.svg"), url("./images/flower1.svg");
-  background-size: 200px 200px, 200px 200px;
-  background-position: 0px 0px, -100px -100px; }
+  background-color: #ffd9e6; }
 
 .hero__background-single {
   position: absolute;
@@ -709,14 +701,11 @@ a {
   height: 550px;
   overflow: hidden;
   z-index: -1;
-  background-color: #1e1e1e;
-  background-image: url("./images/flower2.svg"), url("./images/flower1.svg");
-  background-size: 150px 150px, 150px 150px;
-  background-position: 0px 0px, -75px -75px; }
+  background-color: #9e9d9d; }
 
 .hero__callout-right {
-  background-color: #0f0f0f;
-  color: #f3f3f3;
+  background-color: #fff;
+  color: #0f0f0f;
   position: absolute;
   right: -20px;
   top: 25%;
@@ -728,8 +717,8 @@ a {
       right: 5%; } }
 
 .hero__callout-left {
-  background-color: #0f0f0f;
-  color: #f3f3f3;
+  background-color: #fff;
+  color: #0f0f0f;
   position: absolute;
   left: -20px;
   top: 25%;
@@ -740,17 +729,20 @@ a {
       width: 90%;
       left: 5%; } }
 
-.hero__callout-center {
-  background-color: #0f0f0f;
-  color: #f3f3f3;
+.hero__callout {
+  background-color: #fff;
+  color: #0f0f0f;
   position: absolute;
   left: 25%;
   top: 25%;
   padding: 50px;
   width: 50%;
-  height: 50%; }
+  height: 50%;
+  -webkit-box-shadow: 10px 10px 5px 0px #dedede;
+  -moz-box-shadow: 10px 10px 5px 0px #dedede;
+  box-shadow: 10px 10px 5px 0px #dedede; }
   @media (max-width: 767px) {
-    .hero__callout-center {
+    .hero__callout {
       width: 90%;
       left: 5%; } }
 
@@ -881,7 +873,9 @@ a {
   float: left;
   width: 100%;
   position: relative;
-  z-index: 5; }
+  z-index: 10;
+  background-color: transparent;
+  height: 75px; }
 
 @media (max-width: 767px) {
   .site-branding {
@@ -889,18 +883,26 @@ a {
     margin-left: 10px; } }
 
 .navbar-brand {
-  font-family: "Homemade Apple", cursive; }
+  font-family: "Homemade Apple", cursive;
+  margin-top: -20px; }
+  @media (max-width: 767px) {
+    .navbar-brand {
+      margin-top: 0px; } }
 
 .navbar-default .navbar-brand {
   color: #0f0f0f;
   font-size: 28px; }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-brand {
+      font-size: 18px; } }
 
 .navbar-default .navbar-nav > li > a {
   color: #0f0f0f;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 16px;
-  margin-top: 8px; }
+  margin-top: 15px;
+  padding: 0px 15px; }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #9e9d9d;

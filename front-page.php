@@ -13,8 +13,9 @@ get_header(); ?>
 		<main id="main" class="site-main">
 			<section class="jumbotron">
   				<div class="container">
-  					<div class="hero__background"></div>
-  					<div class="hero__callout-right">
+  					<div class="hero__background">
+  					</div>
+  					<div class="hero__callout">
   						<h1>hello...</h1>
   						<p>My name is Christina and I make web sites and other web things.</p>
   					</div>
