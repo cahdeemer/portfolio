@@ -26,7 +26,8 @@
     }
 }
 
-.section__about {
+.section__about,
+.section__tags {
     background-color: lighten($green, 50%);
 }
 
@@ -46,4 +47,28 @@
 
 .section__bc {
     background-color: lighten($pink, 15%);
+}
+
+.section__featured {
+    background-color: lighten($grey, 15%);
+}
+
+
+.posts__wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.post__preview {
+    width: 30%;
+    //margin: 0 14px 60px 14px;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    position: relative;
+}
+
+.tag__wrapper {
+    text-align: center;
+
 }

@@ -247,6 +247,12 @@ h4, h5, h6 {
 h5, h6 {
   font-weight: 700; }
 
+.featured-title {
+  margin-top: 0px; }
+
+.featured-date {
+  margin-bottom: 0px; }
+
 p {
   margin-bottom: 1.5em;
   font-size: 16px;
@@ -373,13 +379,12 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ff4081;
-  border-radius: 3px;
+  border-radius: 0px;
   background: transparent;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em; }
+  padding: 6px 12px; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -393,6 +398,22 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"]:focus {
     border-color: #ff4081; }
+
+.btn {
+  border: 2px solid #0f0f0f;
+  border-radius: 0px;
+  background-color: transparent;
+  color: #0f0f0f !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin: 20px;
+  transition: all 0.5s ease-in-out; }
+  .btn:hover {
+    border: 2px solid #0f0f0f;
+    background-color: black;
+    color: #f3f3f3 !important; }
 
 input[type="text"],
 input[type="email"],
@@ -467,7 +488,8 @@ textarea {
       text-align: center;
       left: 10%; } }
 
-.section__about {
+.section__about,
+.section__tags {
   background-color: #befcc4; }
 
 @media (max-width: 767px) {
@@ -480,6 +502,23 @@ textarea {
 
 .section__bc {
   background-color: #ff8db3; }
+
+.section__featured {
+  background-color: #c4c3c3; }
+
+.posts__wrapper {
+  position: relative;
+  text-align: center; }
+
+.post__preview {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  position: relative; }
+
+.tag__wrapper {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -624,7 +663,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300%;
   height: 550px;
   overflow: hidden;
   z-index: -1;
@@ -638,8 +677,8 @@ a {
   position: absolute;
   top: -50px;
   left: -500px;
-  width: 200%;
-  height: 650px;
+  width: 300%;
+  height: 550px;
   overflow: hidden;
   z-index: -1;
   background-color: #ffd9e6;
@@ -649,10 +688,10 @@ a {
 
 .hero__background-single {
   position: absolute;
-  top: -150px;
+  top: 0px;
   left: -500px;
-  width: 200%;
-  height: 750px;
+  width: 300%;
+  height: 550px;
   overflow: hidden;
   z-index: -1;
   background-color: #1e1e1e;
@@ -684,7 +723,7 @@ a {
   @media (max-width: 767px) {
     .hero__callout-left {
       width: 90%;
-      right: 5%; } }
+      left: 5%; } }
 
 .hero__callout-center {
   background-color: #0f0f0f;
@@ -698,7 +737,7 @@ a {
   @media (max-width: 767px) {
     .hero__callout-center {
       width: 90%;
-      right: 5%; } }
+      left: 5%; } }
 
 /*--------------------------------------------------------------
 # Hero
