@@ -20,13 +20,13 @@
 
 		<section class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="col-sm-10 col-sm-offset-1">
+				
 
 
 					<?php get_template_part('template-parts/loop'); ?>
 
 			
-				</div>
+				
 			</div>
 
 		</section>
