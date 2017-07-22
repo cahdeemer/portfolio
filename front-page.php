@@ -16,8 +16,8 @@ get_header(); ?>
   					<div class="hero__background">
   					</div>
   					<div class="hero__callout">
-  						<h1>hello...</h1>
-  						<p>My name is Christina and I make web sites and other web things.</p>
+  						<h1><?php the_field('hero_callout_heading'); ?></h1>
+  						<p><?php the_field('hero_callout_text'); ?></p>
   					</div>
    
  				 </div>
@@ -85,7 +85,7 @@ get_header(); ?>
 
 					</div>
 					<div class="col-sm-8">
-						<p>I'm a Philly-based developer who came to coding after more than a decade as an arts manager and fundraiser. I was a 2015 Open Source Mentorship Program Fellow and am an active student and volunteer with Girl Develop It Philly. I am a voracious reader, poetry snob, foodie, leftie, INTJ, and proud introvert. I am married to an oboe player and have a cat named Pickles.</p>
+						<p><?php the_field('about_section_text'); ?></p>
 					</div>
 				</div>
 
