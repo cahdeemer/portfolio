@@ -323,8 +323,9 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5em 0em;
-  -webkit-padding-start: 0px; }
+  margin: 0 0 1.5em 1em;
+  -webkit-padding-start: 0px;
+  font-size: 16px; }
 
 ul {
   list-style: disc; }
@@ -335,7 +336,8 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 1.5em;
+  font-size: 16px; }
 
 dt {
   font-weight: bold; }
@@ -859,7 +861,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0 0 0; }
 
 .page-links {
   clear: both;
