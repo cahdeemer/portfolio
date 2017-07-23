@@ -143,6 +143,8 @@ function chd_portfolio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'chd_portfolio_scripts' );
 
+
+
 /**
  * Implement the Custom Header feature.
  */

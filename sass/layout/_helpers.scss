@@ -66,6 +66,12 @@
     vertical-align: top;
     zoom: 1;
     position: relative;
+    @include screen-sm {
+        width: 50%;
+    }
+    @include screen-xs {
+        width: 100%;
+    }
 }
 
 .tag__wrapper {

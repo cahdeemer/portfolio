@@ -6,11 +6,11 @@
 		<section class="jumbotron">
   				<div class="container">
   					<div class="hero__background-single"></div>
-  					<div class="hero__callout-center">
+  					<div class="hero__callout">
   						<h6>Tag Archive</h6>
   						<h1 class="entry-title"><?php echo single_tag_title('', false); ?></h1>
-  						<a class="btn btn-white" href="">Featured Post</a>
-  						<a class="btn btn-white" href="">All Posts</a>
+  						
+  						<a class="btn btn-default" href="">All Posts</a>
 
   					</div>
    

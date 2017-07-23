@@ -2,13 +2,20 @@
 	
 ?>
 
-	<a class="project__single post__preview">
+	<a class="project__single post__preview" href="<?php the_permalink(); ?>">
 					  	
-		<img src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat placeholder">
-			<h5>January 1, 2018</h5>
-			<h3>Title of Post</h3>
+			<?php echo get_the_post_thumbnail(); ?>
+			<h5><?php the_date(); ?></h5>
+			<h3><?php the_title(); ?></h3>
 			<div class="project__overlay">
-				<h5>Tag 1</h5>
+			<?php 
+				$posttags = get_the_tags();
+				if ($posttags) {
+					foreach($posttags as $tag) {
+						echo "<h5>" . $tag->name . "</h5>"; 
+					}
+				}
+			?>
 			</div>
 	</a>	
 

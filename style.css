@@ -545,6 +545,12 @@ textarea {
   vertical-align: top;
   zoom: 1;
   position: relative; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .post__preview {
+      width: 50%; } }
+  @media (max-width: 767px) {
+    .post__preview {
+      width: 100%; } }
 
 .tag__wrapper {
   text-align: center; }
