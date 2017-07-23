@@ -22,7 +22,7 @@
 						    foreach ($tags as $tag){
 						        $tag_link = get_tag_link($tag->term_id);
 
-						        $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} btn btn-default'>";
+						        $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag-link btn btn-default'>";
 						        $html .= "{$tag->name}</a>";
 						    }
 						    $html .= '</div>';

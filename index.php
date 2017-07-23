@@ -34,14 +34,37 @@ get_header(); ?>
 			<section class="section__featured row">
 				<h2 class="section__title-center">featured post</h2>
 				<div class="col-sm-10 col-sm-offset-1">
-					<div class="col-sm-4">
-						<img src="http://rs150.pbsrc.com/albums/s85/michelleNpete/BaBas/awesome-beautiful-blue-eyes-cat-cute-Favimcom-110476.jpg~c200">
+					
+						<?php
+							$args = array( "showposts" => 1 );                  
+						    query_posts($args);
 
-					</div>
-					<div class="col-sm-8">
-						<h5 class="featured-date">January 1, 2018</h5>
-						<h2 class="featured-title">post title</h2>
-						<p class="featured-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium pharetra purus vitae mattis. Vestibulum et malesuada nisl. Suspendisse faucibus felis sit amet lacus condimentum dictum. Nam aliquam molestie pretium. Nam mi diam, efficitur non pharetra vitae, consequat ac turpis. </p>
+						    $content = "";
+
+						    if( have_posts() ) : 
+
+						        while( have_posts() ) : the_post();
+						    		$thumbnail = get_the_post_thumbnail();
+						    		$date = get_the_date();
+						            $link = get_permalink();
+						            $title = get_the_title();                       
+
+						            $content .= "<div class='col-sm-4'>";
+						            $content .= $thumbnail;
+						            $content .= "</div>";
+						            $content .= "<div class='col-sm-8'>";
+						            $content .= "<h5 class='featured-date'>$date</h5>";
+						            $content .= "<h2><a href='$link' target='_top'>$title</a></h1>\n";
+						            $content .= "<p class='featured-excerpt'>" . get_the_excerpt() . "</p>";
+						            $content .= "</div>";
+						        endwhile;
+
+						        wp_reset_query();
+
+    						endif;
+
+    						echo $content; 
+						?>
 					</div>
 				</div>
 
@@ -51,56 +74,69 @@ get_header(); ?>
 			<section class="section__posts row">
 				<h2 class="section__title-left">most recent posts</h2>
 				<div class="col-sm-10 col-sm-offset-1 posts__wrapper">
-					  	<a class="project__single post__preview">
-					  	
-						  	<img src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat placeholder">
-						  	<h5>January 1, 2018</h5>
-						  	<h3>Title of Post</h3>
-						  	<div class="project__overlay">
-						  		<h5>Tag 1</h5>
-						  	</div>
-					  	</a>
-					  	<a class="project__single post__preview">
-					  	
-						  	<img src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat placeholder">
-						  	<h5>Spring 2015</h5>
-						  	<h3>Title of Project</h3>
-						  	<div class="project__overlay">
-						  		<h5>Tag 1 </h5>
-						  		<h5>Tag 2</h5>
-						  	</div>
-					  	</a>
+						<?php
+							$args = array( "showposts" => 6 );                  
+						    query_posts($args);
 
-					  	<a class="project__single post__preview">
-					  	
-						  	<img src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat placeholder">
-						  	<h5>Spring 2015</h5>
-						  	<h3>Title of Project</h3>
-						  	<div class="project__overlay">
-						  		<h5>Tag 1</h5>
-						  		<h5>Tag 2</h5>
-						  		<h5>Tag 3</h5>
-						  	</div>
-					  	</a>
-					  	<a class="project__single post__preview">
-					  	
-						  	<img src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat placeholder">
-						  	<h5>Spring 2015</h5>
-						  	<h3>Title of Project</h3>
-						  	<div class="project__overlay">
-						  		<h5>Tag 1</h5>
-						  		<h5>Tag 2</h5>
-						  		<h5>Tag 3</h5>
-						  		<h5>Tag 4</h5>
-						  	</div>
-					  	</a>
+						    $content = "";
+
+						    if( have_posts() ) : 
+
+						        while( have_posts() ) : the_post();
+						    		$thumbnail = get_the_post_thumbnail();
+						    		$date = get_the_date();
+						            $link = get_permalink();
+						            $title = get_the_title();  
+						                                
+
+						            $content .= "<a class='project__single post__preview' href='$link'>";
+						            $content .= $thumbnail;
+						            $content .= "<h5>$date</h5>";
+						            $content .= "<h3>$title</h3>";
+						            $content .= "<div class='project__overlay'>";
+
+									$posttags = get_the_tags();
+									if ($posttags) {
+									  foreach($posttags as $tag) {
+									    $content .= "<h5>" . $tag->name . "</h5>"; 
+									  }
+									}
+									
+						            $content .= "</div>";
+						            $content .= "</a>";
+						        endwhile;
+
+						        wp_reset_query();
+
+    						endif;
+
+    						echo $content; 
+						?>
+
+
 				</div>
 			</section>
 
 			<section class="section__tags row">
 				<h2 class="section__title-center">all tags</h2>
 				<div class="col-sm-10 col-sm-offset-1 tag__wrapper">
-					<a class="btn btn-default btn-dark" href="">Tag 1</a>
+					<?php
+						   	$tags = get_tags();
+							$html = '<div class="post_tags">';
+							foreach ( $tags as $tag ) {
+								$tag_link = get_tag_link( $tag->term_id );
+										
+								$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} btn btn-default btn-dark'>";
+								$html .= "{$tag->name}</a>";
+							}
+							$html .= '</div>';
+							echo $html;
+
+					?>
+
+
+
+					<!-- <a class="btn btn-default btn-dark" href="">Tag 1</a>
 					<a class="btn btn-default btn-dark" href="">Tag 2</a>
 					<a class="btn btn-default btn-dark" href="">Long Tag Name</a>
 					<a class="btn btn-default btn-dark" href="">Tag 4</a>
@@ -111,7 +147,7 @@ get_header(); ?>
 					<a class="btn btn-default btn-dark" href="">Tag 1</a>
 					<a class="btn btn-default btn-dark" href="">Tag 2</a>
 					<a class="btn btn-default btn-dark" href="">Tag 3</a>
-					<a class="btn btn-default btn-dark" href="">Tag 4</a>
+					<a class="btn btn-default btn-dark" href="">Tag 4</a> -->
 				</div>
 			</section>
 

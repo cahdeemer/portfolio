@@ -378,28 +378,40 @@ table {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
+input[type="submit"],
+.btn-default {
+  border: 2px solid;
   border-color: #ff4081;
   border-radius: 0px;
   background: transparent;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
   line-height: 1;
-  padding: 6px 12px; }
+  padding: 10px 30px;
+  margin: 0px 10px;
+  transition: all 0.5s ease-in-out; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ff4081; }
+  input[type="submit"]:hover,
+  .btn-default:hover {
+    border-color: #ff4081;
+    background: #ff4081;
+    color: #f3f3f3; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #ff4081; }
+  input[type="submit"]:focus,
+  .btn-default:active,
+  .btn-default:focus {
+    border-color: #ff4081;
+    background: #ff4081;
+    color: #f3f3f3; }
 
 .btn-dark {
   border: 2px solid #0f0f0f;
@@ -414,7 +426,7 @@ input[type="submit"] {
   transition: all 0.5s ease-in-out; }
   .btn-dark:hover {
     border: 2px solid #0f0f0f;
-    background-color: #f3f3f3;
+    background-color: #0f0f0f;
     color: #f3f3f3 !important; }
 
 .btn-white {
