@@ -95,6 +95,36 @@ function chd_portfolio_content_width() {
 }
 add_action( 'after_setup_theme', 'chd_portfolio_content_width', 0 );
 
+
+// CUSTOM POST TYPE STUFF
+function create_custom_post_types() {
+	 register_post_type( 'projects',
+        array(
+            'labels' => array(
+                'name' => __( 'project' ),
+                'singular_name' => __( 'project' ),
+                'add_new' => __( 'add new project' ),
+                'add_new_item' => __( 'add new project' ),
+                'edit_item' => __( 'edit project' ),
+                'new_item' => __( 'new project' ),
+                'view_item' => __( 'view project' ),
+                'all_items' => __( 'all projects' ),
+                'not_found' => __( 'project not found.' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'taxonomies'  => array( 'category', 'post_tag'),
+            'supports' => array( 'title', 'editor', 'comments', 'author', 'custom-fields', 'thumbnail', 'post-thumbnails', 'custom-fields', 'post-templates', 'revisions'),
+            'rewrite' => array( 'slug' => 'projects' ),
+        )
+    );
+}
+add_action( 'init', 'create_custom_post_types' );
+
+
+
+
 // REMOVE THIS - NOT NEEDED
 /**
  * Register widget area.
@@ -142,6 +172,8 @@ function chd_portfolio_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'chd_portfolio_scripts' );
+
+
 
 
 

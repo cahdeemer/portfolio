@@ -10,7 +10,7 @@
   						<h6>Tag Archive</h6>
   						<h1 class="entry-title"><?php echo single_tag_title('', false); ?></h1>
   						
-  						<a class="btn btn-default" href="">All Posts</a>
+  						<a class="btn btn-default" href="<?php echo get_permalink( get_option('page_for_posts' )); ?>">All Posts</a>
 
   					</div>
    
