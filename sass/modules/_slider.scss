@@ -43,6 +43,23 @@
 	}
 }
 
+.single__gallery {
+	height: 400px;
+	width: 100%;
+	overflow: hidden;
+	img {
+		width: 75%;
+    	display: block;
+    	margin: 0 auto;
+	}
+	@include screen-sm {
+		height: auto;
+	}
+	@include screen-xs {
+		height: auto;
+	}
+}
+
 
 
 .slick-prev:before {

@@ -28,10 +28,11 @@
 
 .section__about,
 .section__tags {
-    background-color: lighten($green, 50%);
+    background-color: lighten($grey, 15%);
 }
 
 .section__about {
+
     img {
         @include screen-xs {
             display: block;
@@ -76,5 +77,16 @@
 
 .tag__wrapper {
     text-align: center;
+}
 
+.img-sq-wrapper {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    @include screen-xs {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 60px;
+       
+    }
 }

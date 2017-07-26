@@ -16,8 +16,11 @@
   					<div class="hero__background-page"></div>
   					<div class="hero__callout">
   						<h1><?php the_field('hero_callout_heading'); ?></h1>
-  						<p><?php the_field('hero_callout_text'); ?></p>
-
+  						<?php if (get_field('project_online')): ?>
+  							<a href="<?php the_field('project_url'); ?>" target="_blank" class="btn btn-default">View the Project</a>
+  						<?php else: ?>
+  								<p><?php the_field('hero_callout_text'); ?></p>
+  						<?php endif; ?>
 
   					</div>
    
@@ -31,10 +34,29 @@
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="col-sm-12">
 								<?php the_field('project_body'); ?>
-
-
-							</div>
+								
+							</div><!-- /col-sm-12 --> 
 						</div>
+					</section>
+					<section class="section__pics row">
+					<h2 class="section__title-left">gallery</h2>
+						<div class="slider__large col-sm-10 col-sm-offset-1">
+
+						<?php if ( have_rows('project_gallery') ): ?>
+						<?php while ( have_rows('project_gallery') ): the_row(); 
+							$image = get_sub_field('gallery_image');
+						?>
+
+							<div class="single__gallery">
+							<img src="<?php echo $image; ?>">
+							</div>
+							
+
+						<?php endwhile; ?>
+						<?php endif; ?>
+						
+						</div>
+
 
 
 					</section>

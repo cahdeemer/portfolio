@@ -99,7 +99,7 @@ add_action( 'after_setup_theme', 'chd_portfolio_content_width', 0 );
 
 // CUSTOM POST TYPE STUFF
 function create_custom_post_types() {
-	 register_post_type( 'projects',
+	 register_post_type( 'project',
         array(
             'labels' => array(
                 'name' => __( 'project' ),
