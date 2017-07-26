@@ -44,8 +44,9 @@ function chd_portfolio_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'chd_portfolio' ),
+		'primary' => esc_html__( 'Primary', 'chd_portfolio' ),
 	) );
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -121,6 +122,9 @@ function create_custom_post_types() {
     );
 }
 add_action( 'init', 'create_custom_post_types' );
+
+// Register Custom Navigation Walker
+require_once('wp-bootstrap-navwalker.php');
 
 
 
