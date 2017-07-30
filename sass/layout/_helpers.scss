@@ -2,6 +2,7 @@
 	position: absolute;
     top: -47px;
     left: 50px;
+    width: 25%;
     background-color: black;
     color: white;
     padding: 10px 50px;
@@ -15,14 +16,22 @@
 .section__title-center{
 	position: absolute;
     top: -47px;
-    left: 43%;
     background-color: black;
     color: white;
-    padding: 10px 50px;
+    padding: 10px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+    text-align: center;
     @include screen-xs {
         width: 80%;
         text-align: center;
         left: 10%;
+        right: initial;
+        margin-right: initial;
+        margin-left: initial;
     }
 }
 
@@ -42,12 +51,28 @@
 
 }
 
+.section__grey {
+    background-color: $grey;
+}
+
+.section__white {
+    background-color: $white;
+}
+
 .section__training {
     background-color: $white;
 }
 
+.section__skills {
+    background-color: $grey;
+}
+
+.section__experience {
+    background-color: lighten($grey, 15%);
+}
+
 .section__bc {
-    background-color: lighten($pink, 15%);
+    background-color: $grey;
 }
 
 .section__featured {

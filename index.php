@@ -20,7 +20,7 @@ get_header(); ?>
 		<section class="jumbotron">
   				<div class="container">
   					
-  					<div class="hero__background-single"></div>
+  					<div class="hero__background-single" id="grid-index"></div>
   					
   					<div class="hero__callout">
   						<h6>maybe a subheading</h6>

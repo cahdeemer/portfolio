@@ -11,9 +11,9 @@ get_header(); ?>
 
 <!-- 	<div id="primary" class="content-area"> -->
 		<main id="main" class="site-main">
-			<section class="jumbotron">
+			<section class="jumbotron" >
   				<div class="container">
-  					<div class="hero__background">
+  					<div class="hero__background" id="grid">
   					</div>
   					<div class="hero__callout">
   						<h1><?php the_field('hero_callout_heading'); ?></h1>

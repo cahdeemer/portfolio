@@ -21,22 +21,24 @@ while ( have_posts() ) : the_post(); ?>
 		<main id="main" class="site-main">
 			<section class="jumbotron">
   				<div class="container">
-  					<div class="hero__background-page"></div>
+  					<div class="hero__background-page" id="grid-page"></div>
   					<div class="hero__callout">
   						<h1><?php the_field('hero_callout_heading'); ?></h1>
   						<p><?php the_field('hero_callout_text'); ?></p>
+
 
   					</div>
    
  				 </div>
 			</section>
 			<article class="container-fluid">
-				<section class="section__about row">
+				<section class="section__white row" id="bio">
 				<h2 class="section__title-center">short bio</h2>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="col-sm-4">
-						<img src="http://rs150.pbsrc.com/albums/s85/michelleNpete/BaBas/awesome-beautiful-blue-eyes-cat-cute-Favimcom-110476.jpg~c200">
-
+						<div class="img-sq-wrapper">
+						<img src="<?php the_field('short_bio_image'); ?>">
+						</div>
 					</div>
 					<div class="col-sm-8">
 						<p><?php the_field('short_bio_text');?></p>
@@ -44,30 +46,46 @@ while ( have_posts() ) : the_post(); ?>
 				</div>
 				</section>
 
-				<section class="section__training row">
-				<h2 class="section__title-center">training</h2>
-				<div class="col-sm-10 col-sm-offset-1">
-					<div class="col-sm-12">
-						<?php the_field('training_body'); ?>
-
-
-					</div>
-				</div>
-
-
-			</section>
-
-			<section class="section__bc row">
-				<h2 class="section__title-center">b.c. {before code}</h2>
-				<div class="col-sm-10 col-sm-offset-1">
-					<div class="col-sm-8">
-						<?php the_field('bc_body'); ?>
-					</div>
-					<div class="col-sm-4">
-						<img src="http://rs150.pbsrc.com/albums/s85/michelleNpete/BaBas/awesome-beautiful-blue-eyes-cat-cute-Favimcom-110476.jpg~c200">
+				<section class="section__grey row">
+					<h2 class="section__title-center">skills</h2>
+					<div class="col-sm-8 col-sm-offset-2">
+						
+							<?php the_field('skills_body'); ?>
 
 					</div>
-				</div>
+				</section>
+
+				<section class="section__white row">
+					<h2 class="section__title-center">experience</h2>
+					<div class="col-sm-8 col-sm-offset-2">
+						
+							<?php the_field('experience_body'); ?>
+
+					</div>
+				</section>
+
+
+
+				<section class="section__grey row" id="training">
+					<h2 class="section__title-center">training</h2>
+					<div class="col-sm-8 col-sm-offset-2">
+						
+							<?php the_field('training_body'); ?>
+
+
+						</div>
+					</div>
+				</section>
+
+				<section class="section__white row" id="bc">
+					<h2 class="section__title-center">b.c. {before code}</h2>
+					<div class="col-sm-8 col-sm-offset-2">
+						
+							<?php the_field('bc_body'); ?>
+						
+
+						</div>
+					</div>
 				</section>
 
 			</article>

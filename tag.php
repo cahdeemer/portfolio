@@ -5,7 +5,7 @@
 
 		<section class="jumbotron">
   				<div class="container">
-  					<div class="hero__background-single"></div>
+  					<div class="hero__background-single" id="grid-tag"></div>
   					<div class="hero__callout">
   						<h6>Tag Archive</h6>
   						<h1 class="entry-title"><?php echo single_tag_title('', false); ?></h1>

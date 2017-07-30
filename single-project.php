@@ -13,7 +13,7 @@
 		<main id="main" class="site-main">
 			<section class="jumbotron">
   				<div class="container">
-  					<div class="hero__background-page"></div>
+  					<div class="hero__background" id="grid-project"></div>
   					<div class="hero__callout">
   						<h1><?php the_field('hero_callout_heading'); ?></h1>
   						<?php if (get_field('project_online')): ?>
@@ -31,11 +31,11 @@
 				<article class="container-fluid">
 					<section class="section__training row">
 						<!-- <h2 class="section__title-center">training</h2> -->
-						<div class="col-sm-10 col-sm-offset-1">
-							<div class="col-sm-12">
+						<div class="col-sm-8 col-sm-offset-2">
+							
 								<?php the_field('project_body'); ?>
 								
-							</div><!-- /col-sm-12 --> 
+							
 						</div>
 					</section>
 					<section class="section__pics row">
