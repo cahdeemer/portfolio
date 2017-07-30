@@ -29,7 +29,7 @@
 
  			<div class="entry-content">
 				<article class="container-fluid">
-					<section class="section__training row">
+					<section class="section__white row">
 						<!-- <h2 class="section__title-center">training</h2> -->
 						<div class="col-sm-8 col-sm-offset-2">
 							
@@ -38,7 +38,7 @@
 							
 						</div>
 					</section>
-					<section class="section__pics row">
+					<section class="section__grey row">
 					<h2 class="section__title-left">gallery</h2>
 						<div class="slider__large col-sm-10 col-sm-offset-1">
 
@@ -53,6 +53,8 @@
 							
 
 						<?php endwhile; ?>
+						<?php else: ?>
+							<h3>sorry, no images for this project yet!</h3>
 						<?php endif; ?>
 						
 						</div>

@@ -35,7 +35,11 @@ get_header(); ?>
 				<div class="col-sm-10 col-sm-offset-1">
 					
 						<?php
-							$args = array( "showposts" => 1 );                  
+							$args = array( 
+								'showposts' => 1,
+								'orderby' => 'post_date',
+								'order' => 'ASC',
+							);                  
 						    query_posts($args);
 
 						    $content = "";
@@ -48,9 +52,9 @@ get_header(); ?>
 						            $link = get_permalink();
 						            $title = get_the_title();                       
 
-						            $content .= "<div class='col-sm-4'>";
+						            $content .= "<a href='$link'><div class='col-sm-4'>";
 						            $content .= $thumbnail;
-						            $content .= "</div>";
+						            $content .= "</div></a>";
 						            $content .= "<div class='col-sm-8'>";
 						            $content .= "<h5 class='featured-date'>$date</h5>";
 						            $content .= "<h2><a href='$link' target='_top'>$title</a></h1>\n";

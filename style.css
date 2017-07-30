@@ -745,7 +745,7 @@ nav ul li a:before {
   height: 550px;
   margin-bottom: 0px; }
   .jumbotron h1 {
-    font-size: 50px;
+    font-size: 35px;
     margin-top: 0px; }
 
 .hero__background {
@@ -814,6 +814,10 @@ nav ul li a:before {
   width: 50%;
   height: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-shadow: 0px 5px 0px 0px #e0e0e0;
   -moz-box-shadow: 0px 5px 0px 0px #e0e0e0;
   box-shadow: 0px 5px 0px 0px #e0e0e0; }
@@ -1246,7 +1250,7 @@ object {
     margin: 0.8075em 0; }
 
 .wp-caption-text {
-  text-align: center; }
+  text-align: initial; }
 
 /*--------------------------------------------------------------
 ## Galleries
