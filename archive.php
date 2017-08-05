@@ -12,36 +12,74 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) : ?>
+		<section class="jumbotron">
+  				<div class="container">
+  					
+  					<div class="hero__background" id="grid-archive"></div>
+  					
+  					<div class="hero__callout">
+  						<h6>so many projects!</h6>
+  						<h1 class="entry-title"><?php echo post_type_archive_title( '', false ); ?></h1>
+  					</div>
+   
+ 				</div>
+		</section>
+		<article class="container-fluid">
+			
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			<section class="section__posts row">
+				<h2 class="section__title-left">recent projects</h2>
+				<div class="col-sm-10 col-sm-offset-1 posts__wrapper">
+						<?php
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+							$content = "";						
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+						        while( have_posts() ) : the_post();
+						    		$thumbnail = get_the_post_thumbnail();
+						    		$date = get_the_date();
+						            $link = get_permalink();
+						            $title = get_the_title();  
 
-			endwhile;
+						                                
 
-			the_posts_navigation();
+						            $content .= "<a class='project__single post__preview' href='$link'>";
+						            $content .= $thumbnail;
+						            $content .= "<h5>$date</h5>";
+						            $content .= "<h3>$title</h3>";
+						            $content .= "<div class='project__overlay'>";
 
-		else :
+									$posttags = get_the_tags();
+									if ($posttags) {
+									  foreach($posttags as $tag) {
+									    $content .= "<h5>" . $tag->name . "</h5>"; 
+									  }
+									}
+									
+						            $content .= "</div>";
+						            $content .= "</a>";
+						        endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
+						       
 
-		endif; ?>
+    						
+
+    						echo $content; 
+						?>
+
+
+				</div>
+			</section>
+
+			
+
+
+
+		</article>
+
+		
+
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -46,8 +46,12 @@
 					
 						<?php the_content(); ?>
 
-
 					
+				</div>
+
+				<div class="col-sm-8 col-sm-offset-2 single-pagination">
+					<?php previous_post_link('%link', 'Previous Post'); ?>
+					<?php next_post_link('%link', 'Next Post'); ?>
 				</div>
 
 

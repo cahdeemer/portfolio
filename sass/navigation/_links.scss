@@ -18,3 +18,40 @@ a {
 		outline: 0;
 	}
 }
+
+.single-pagination {
+	display: flex;
+	justify-content: space-between;
+	a[rel="next"] {
+		font-size: 16px;
+		&:after {
+			content: "\2192";
+			position: relative;
+			left: 10px;
+			transition: all 0.25s ease-in-out;
+		}
+		&:hover {
+			&:after {
+				left: 20px;
+			}
+		}
+	}
+	a[rel="prev"] {
+		font-size: 16px;
+		&:before {
+			content: "\2190";
+			width: 75px;
+			position: relative;
+			right: 10px;
+			transition: all 0.25s ease-in-out;
+		}
+		&:hover{
+			&:before {
+				right: 20px;
+			}
+		}
+	}
+	@include screen-xs {
+		justify-content: space-around;
+	}
+}

@@ -6,6 +6,7 @@ var gridIndex = $('#grid-index');
 var gridSingle = $('#grid-single');
 var gridTag = $('#grid-tag');
 var gridProject = $('#grid-project');
+var gridArchive = $('#grid-archive');
 var s = 50;  //space between blocks
 var n = 5;  //shadow range (space between shadow waves)
 var l = 40;  //grid length
@@ -30,10 +31,40 @@ for (var i = 0; i < l; i++) {
         gridTag.append(block5);
         var block6 = $('<div />').addClass('block6').css(style);
         gridProject.append(block6);
+        var block7 = $('<div />').addClass('block7').css(style);
+        gridArchive.append(block7);
     }
 }
 
 
 
+
+
+
+})( jQuery );
+
+( function( $ ) {
+
+   
+
+    var target = $(".jumbotron");
+    var timeout = null;
+
+    $(window).scroll(function () {
+        if (!timeout) {
+            timeout = setTimeout(function () {
+                console.log('scroll');            
+                clearTimeout(timeout);
+                timeout = null;
+                if ($(window).scrollTop() >= target.offset().top) {
+                    $("div[class^='block']").css('-webkit-animation-play-state', 'paused');
+                   
+                } else {
+                    $("div[class^='block']").css('-webkit-animation-play-state', 'running');
+                }
+
+            }, 250);
+        }
+    });
 
 })( jQuery );
