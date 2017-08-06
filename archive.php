@@ -32,14 +32,25 @@ get_header(); ?>
 				<div class="col-sm-10 col-sm-offset-1 posts__wrapper">
 						<?php
 
-							$content = "";						
+							$content = "";
 
-						        while( have_posts() ) : the_post();
+							$args = array(
+									'post_type' => array('project'),
+									'nopaging'  => false,
+									'paged'		=> 1,
+									'taxonomy'  => 'category',
+									'order' 	=> 'ASC',
+								); 
+
+								$the_query = new WP_Query( $args );
+						
+
+						       if ( $the_query->have_posts()): while ( $the_query->have_posts() ):$the_query->the_post(); 
 						    		$thumbnail = get_the_post_thumbnail();
 						    		$date = get_the_date();
 						            $link = get_permalink();
-						            $title = get_the_title();  
-
+						            $title = get_the_title();
+						          
 						                                
 
 						            $content .= "<a class='project__single post__preview' href='$link'>";
@@ -48,16 +59,24 @@ get_header(); ?>
 						            $content .= "<h3>$title</h3>";
 						            $content .= "<div class='project__overlay'>";
 
-									$posttags = get_the_tags();
-									if ($posttags) {
-									  foreach($posttags as $tag) {
-									    $content .= "<h5>" . $tag->name . "</h5>"; 
-									  }
+								 	$terms = get_the_terms($the_query->ID, 'category' );
+										if ($terms && ! is_wp_error($terms)) :
+									
+									foreach ($terms as $term) {
+									    $content.= '<h5>' . $term->name . '</h5>';
 									}
+									
+								endif;
+									
+								
+					  				
+								
+								
 									
 						            $content .= "</div>";
 						            $content .= "</a>";
 						        endwhile;
+						        endif;
 
 						       
 

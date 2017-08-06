@@ -707,6 +707,15 @@ nav ul li a:before {
 .navbar-default .navbar-nav > .active > a:hover {
   color: #ff4081;
   background-color: #f3f3f3; }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:focus,
+    .navbar-default .navbar-nav > .active > a:hover {
+      width: 100%; } }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -967,7 +976,10 @@ nav ul li a:before {
     text-align: center;
     color: #0f0f0f; }
   .slider__single h3, .project__single h3 {
-    margin-top: 0px; }
+    margin-top: 0px;
+    width: 80%;
+    left: 10%;
+    position: relative; }
   .slider__single .project__overlay, .project__single .project__overlay {
     display: flex;
     justify-content: center;
@@ -1032,16 +1044,16 @@ nav ul li a:before {
   margin-left: -15px; }
 
 .slick-dots li {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   margin: 0px 11px; }
 
 .slick-dots li button::before {
   content: '';
-  background-color: #9e9d9d;
+  background-color: black;
   border-radius: 50%;
-  width: 35px;
-  height: 35px; }
+  width: 25px;
+  height: 25px; }
 
 .slick-dots li button:focus:before, .slick-dots li button:hover:before {
   background-color: transparent;
